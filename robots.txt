@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /telemetry.php
+Disallow: /telemetry-api.php
+Disallow: /telemetry-export.php
+Disallow: /telemetry-view.php
+
+# Sitemap
+Sitemap: https://halkylauncher.alex1811.ovh/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1

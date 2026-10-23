@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HalkyLauncher — Free Minecraft Launcher | Безкоштовний Minecraft Лаунчер | Prism Fork</title>
+  <meta name="description" content="HalkyLauncher — free Minecraft launcher, fork of Prism &amp; Freesm Launcher. True offline mode, no Microsoft account needed. Supports Ely.by, custom auth, Modrinth, CurseForge. Windows, Linux, macOS. Безкоштовний лаунчер Майнкрафт без входу.">
+  <meta name="keywords" content="HalkyLauncher, halky launcher, halky lancher, halkylancher, free minecraft launcher, бесплатный майнкрафт, безкоштовний майнкрафт, freesm launcher, freesm, free minecraft, minecraft free, minecraft launcher free, prism launcher fork, prism launcher, prism fork, MultiMC fork, offline minecraft launcher, minecraft offline mode, minecraft without microsoft account, minecraft no account, ely.by launcher, ely.by support, custom auth server, authlib-injector, modrinth launcher, curseforge launcher, minecraft mod launcher, minecraft modpack launcher, best minecraft launcher, open source minecraft launcher, free minecraft download, minecraft launcher windows, minecraft launcher linux, minecraft launcher macos, halky launcher download, halky minecraft, halky launcher free, halkylauncher download, free sm launcher, freesm launcher download, best prism launcher alternative, minecraft launcher 2024, minecraft launcher 2025, безкоштовний лаунчер майнкрафт, лаунчер майнкрафт без реєстрації, майнкрафт без microsoft, офлайн майнкрафт, minecraft лаунчер">
+  <meta name="author" content="HalkyLauncher — oleksandr1811">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#a855f7">
+
+  <!-- hreflang for multilingual SEO -->
+  <link rel="alternate" hreflang="en" href="https://halkylauncher.alex1811.ovh/?lang=en">
+  <link rel="alternate" hreflang="uk" href="https://halkylauncher.alex1811.ovh/?lang=uk">
+  <link rel="alternate" hreflang="de" href="https://halkylauncher.alex1811.ovh/?lang=de">
+  <link rel="alternate" hreflang="x-default" href="https://halkylauncher.alex1811.ovh/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HalkyLauncher — Free Minecraft Launcher (Prism / Freesm Fork)">
+  <meta property="og:description" content="Free Minecraft launcher with true offline mode, Ely.by support and custom auth servers. No Microsoft account required. Fork of Prism &amp; Freesm Launcher. Windows, Linux, macOS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://halkylauncher.alex1811.ovh">
+  <meta property="og:image" content="https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="HalkyLauncher logo — free Minecraft launcher">
+  <meta property="og:site_name" content="HalkyLauncher">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="og:locale:alternate" content="de_DE">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HalkyLauncher — Free Minecraft Launcher">
+  <meta name="twitter:description" content="Free Minecraft launcher with offline mode, Ely.by support and no Microsoft account required. Fork of Prism Launcher.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp">
+
+  <link rel="canonical" href="https://halkylauncher.alex1811.ovh">
+  <link rel="alternate" type="application/atom+xml" title="HalkyLauncher News" href="https://halkylauncher.alex1811.ovh/feed.xml">
+  <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "HalkyLauncher",
+    "alternateName": ["Halky Launcher", "HalkyLancher", "Halky Minecraft Launcher", "Free Minecraft Launcher"],
+    "applicationCategory": "GameApplication",
+    "applicationSubCategory": "Minecraft Launcher",
+    "operatingSystem": ["Windows", "Linux", "macOS"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://halkylauncher.alex1811.ovh",
+    "downloadUrl": "https://github.com/oleksandr1811/HalkyLauncher/releases",
+    "license": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+    "isBasedOn": "https://github.com/FreesmTeam/FreesmLauncher",
+    "description": "HalkyLauncher is a free, open-source Minecraft launcher — a fork of Freesm (Prism) Launcher with excellent UI, true offline mode, Ely.by integration, custom auth server support, and Modrinth/CurseForge mod browser. No Microsoft account required.",
+    "featureList": [
+      "True offline mode — no Microsoft account required",
+      "Ely.by skin server integration",
+      "Custom authentication server support",
+      "authlib-injector support",
+      "Modrinth mod browser",
+      "CurseForge mod browser",
+      "Multiple game instances",
+      "Modpack installation",
+      "Shader installation",
+      "Resource pack manager",
+      "Auto screenshot to clipboard",
+      "Free and open source (GPL-3.0)"
+    ],
+    "screenshot": "https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp",
+    "softwareVersion": "latest",
+    "author": {
+      "@type": "Person",
+      "name": "oleksandr1811",
+      "url": "https://github.com/oleksandr1811"
+    },
+    "sameAs": [
+      "https://github.com/oleksandr1811/HalkyLauncher",
+      "https://discord.gg/Ntx74Zy3Wy",
+      "https://t.me/halky_launcher"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQ (boosts rich results in Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is HalkyLauncher free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. HalkyLauncher is completely free and open-source under the GPL-3.0 license. No subscriptions, no hidden fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a Microsoft account to play Minecraft with HalkyLauncher?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. HalkyLauncher features a true offline mode — you can play Minecraft without any Microsoft account or mandatory login."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is HalkyLauncher?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HalkyLauncher is a modern Minecraft launcher — a fork of Freesm (Prism) Launcher with improved UI, true offline mode, Ely.by skin support, custom authentication servers, Modrinth and CurseForge mod browser, and full modpack support. Available for Windows, Linux and macOS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HalkyLauncher a fork of Prism Launcher?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. HalkyLauncher is based on Freesm Launcher, which itself is a fork of Prism Launcher. It inherits all features of Prism and MultiMC plus adds unique enhancements like Ely.by integration and improved offline mode."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What operating systems does HalkyLauncher support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HalkyLauncher supports Windows (x64 and ARM64), Linux (x64 and ARM64), and macOS (Intel and Apple Silicon)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does HalkyLauncher support Ely.by?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. HalkyLauncher has native Ely.by support built in — no third-party mods or plugins needed to display custom skins from Ely.by."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I install mods and modpacks with HalkyLauncher?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. HalkyLauncher includes a built-in mod browser for Modrinth and CurseForge, allowing you to download and install mods, modpacks, shaders, and resource packs directly from the launcher."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: WebSite + Sitelinks Searchbox -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HalkyLauncher",
+    "url": "https://halkylauncher.alex1811.ovh",
+    "description": "Free Minecraft Launcher — fork of Freesm (Prism) Launcher",
+    "inLanguage": ["en", "uk", "de"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://halkylauncher.alex1811.ovh/#download"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#07070f;--bg2:#0d0d1a;--card:rgba(255,255,255,.04);--cardh:rgba(255,255,255,.07);
+      --bdr:rgba(255,255,255,.07);--bdrh:rgba(168,85,247,.45);
+      --p:#a855f7;--pl:#c084fc;--pk:#f5c2e7;--pb:#ec4899;
+      --t:#f1f5f9;--t2:#94a3b8;--t3:#64748b;
+      --grad:linear-gradient(135deg,#a855f7 0%,#ec4899 55%,#f5c2e7 100%);
+      --gcard:linear-gradient(135deg,rgba(168,85,247,.09) 0%,rgba(236,72,153,.05) 100%);
+      --glow:0 0 50px rgba(168,85,247,.18);--shadow:0 8px 40px rgba(0,0,0,.5);
+      --r:14px;--rs:8px;--rl:22px;--rxl:30px;--ease:.3s cubic-bezier(.4,0,.2,1)
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}
+    ::-webkit-scrollbar-thumb{background:rgba(168,85,247,.35);border-radius:3px}
+    ::-webkit-scrollbar-thumb:hover{background:var(--p)}
+    a{color:inherit;text-decoration:none}img{max-width:100%;height:auto;display:block}button{font-family:inherit;cursor:pointer}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+    .gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:var(--r);font-size:.9rem;font-weight:700;transition:var(--ease);border:none;white-space:nowrap}
+    .btn svg{width:18px;height:18px;flex-shrink:0}
+    .btn-fill{background:var(--grad);color:#fff;box-shadow:0 4px 24px rgba(168,85,247,.3)}
+    .btn-fill:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(168,85,247,.5);opacity:.92}
+    .btn-ghost{background:transparent;color:var(--t2);border:1px solid var(--bdr)}
+    .btn-ghost:hover{border-color:var(--bdrh);color:var(--t);background:var(--card);transform:translateY(-2px)}
+    .btn-lg{padding:17px 38px;font-size:1.05rem;border-radius:var(--rl)}
+
+    /* NAV */
+    #nav{position:fixed;inset:0 0 auto 0;z-index:200;padding:14px 0;transition:var(--ease)}
+    #nav.solid{background:rgba(7,7,15,.82);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--bdr)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem}
+    .nav-logo img{width:30px;height:30px;border-radius:8px}
+    .nav-logo span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+    .nav-links a{padding:7px 14px;border-radius:var(--rs);color:var(--t2);font-size:.875rem;font-weight:500;transition:var(--ease)}
+    .nav-links a:hover{color:var(--t);background:var(--card)}
+    .nav-end{display:flex;align-items:center;gap:10px}
+    .nav-gh{display:flex;align-items:center;gap:7px;padding:7px 14px;border-radius:var(--rs);border:1px solid var(--bdr);color:var(--t2);font-size:.8rem;font-weight:500;transition:var(--ease)}
+    .nav-gh:hover{border-color:var(--bdrh);color:var(--t)}
+    .nav-gh svg{width:15px;height:15px}
+
+    /* LANG SWITCHER */
+    .lang-sw{display:flex;align-items:center;gap:2px;background:var(--card);border:1px solid var(--bdr);border-radius:var(--rs);padding:3px}
+    .lang-btn{padding:5px 9px;border-radius:5px;font-size:.7rem;font-weight:700;letter-spacing:.06em;color:var(--t3);background:transparent;border:none;cursor:pointer;transition:var(--ease);line-height:1}
+    .lang-btn.on{background:rgba(168,85,247,.18);color:var(--pl)}
+    .lang-btn:hover:not(.on){color:var(--t2)}
+
+    /* HAMBURGER */
+    .hamburger{display:none;flex-direction:column;gap:5px;padding:9px;border-radius:var(--rs);background:var(--card);border:1px solid var(--bdr)}
+    .hamburger span{display:block;width:18px;height:1.5px;background:var(--t);border-radius:1px;transition:var(--ease)}
+
+    /* MOBILE MENU */
+    #mmenu{display:none;position:fixed;inset:0;z-index:199;background:rgba(7,7,15,.97);backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:6px}
+    #mmenu.open{display:flex}
+    #mmenu a{font-size:1.15rem;font-weight:600;color:var(--t2);padding:13px 28px;border-radius:var(--rs);width:220px;text-align:center;transition:var(--ease)}
+    #mmenu a:hover{color:var(--t);background:var(--card)}
+    .mm-close{position:absolute;top:22px;right:22px;width:38px;height:38px;border-radius:var(--rs);background:var(--card);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--t2);cursor:pointer;transition:var(--ease)}
+    .mm-close:hover{color:var(--t);border-color:var(--bdrh)}
+
+    /* SECTION */
+    .section{padding:96px 0}.section-alt{background:var(--bg2)}
+    .s-head{text-align:center;margin-bottom:56px}
+    .s-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 15px;margin-bottom:16px;background:rgba(168,85,247,.09);border:1px solid rgba(168,85,247,.18);border-radius:100px;font-size:.72rem;font-weight:700;color:var(--pl);text-transform:uppercase;letter-spacing:.09em}
+    .s-title{font-size:clamp(1.7rem,3.8vw,2.6rem);font-weight:800;margin-bottom:14px}
+    .s-desc{font-size:1rem;color:var(--t2);max-width:520px;margin:0 auto;line-height:1.75}
+
+    /* HERO */
+    #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:110px 0 80px}
+    .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+    .hero-radial{position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(168,85,247,.22) 0%,transparent 65%),radial-gradient(ellipse 55% 35% at 85% 85%,rgba(236,72,153,.11) 0%,transparent 55%),radial-gradient(ellipse 45% 35% at 5% 55%,rgba(168,85,247,.07) 0%,transparent 50%)}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(168,85,247,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,.025) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent)}
+    #hero-canvas{position:absolute;inset:0}
+    .hero-body{position:relative;z-index:1;text-align:center;max-width:820px;margin:0 auto}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;margin-bottom:30px;background:rgba(168,85,247,.09);border:1px solid rgba(168,85,247,.22);border-radius:100px;font-size:.78rem;font-weight:600;color:var(--pl);animation:aFadeDown .6s ease both}
+    .badge-dot{width:6px;height:6px;background:var(--pl);border-radius:50%;animation:aPulse 2s infinite}
+    .hero-logo{width:96px;height:96px;border-radius:22px;margin:0 auto 28px;filter:drop-shadow(0 0 32px rgba(168,85,247,.55));animation:aFadeUp .6s .1s ease both}
+    .hero-title{font-size:clamp(2.4rem,6vw,4.6rem);font-weight:900;line-height:1.1;background:linear-gradient(140deg,#fff 0%,#c084fc 45%,#f5c2e7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;animation:aFadeUp .6s .2s ease both}
+    .hero-sub{font-size:clamp(.95rem,2.2vw,1.2rem);color:var(--t2);max-width:580px;margin:0 auto 40px;line-height:1.75;animation:aFadeUp .6s .3s ease both}
+    .hero-sub strong{color:var(--t)}
+    .hero-acts{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;animation:aFadeUp .6s .4s ease both}
+    .hero-note{margin-top:18px;font-size:.78rem;color:var(--t3);animation:aFadeUp .6s .5s ease both}
+    .hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);animation:aBounce 2.2s infinite}
+    .scroll-pill{width:22px;height:36px;border:1.5px solid rgba(168,85,247,.4);border-radius:11px;display:flex;justify-content:center;padding-top:5px}
+    .scroll-pill::after{content:'';width:3px;height:7px;background:var(--p);border-radius:2px;animation:aScrollDot 2s infinite}
+
+    /* FEATURES */
+    .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .feat-card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:30px;position:relative;overflow:hidden;transition:var(--ease)}
+    .feat-card::after{content:'';position:absolute;inset:0;background:var(--gcard);opacity:0;transition:var(--ease)}
+    .feat-card:hover{border-color:var(--bdrh);transform:translateY(-5px);box-shadow:var(--glow),var(--shadow)}
+    .feat-card:hover::after{opacity:1}
+    .feat-inner{position:relative;z-index:1}
+    .feat-icon{width:50px;height:50px;border-radius:13px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.18);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
+    .apple-emoji{display:inline-block;width:1.4em;height:1.4em;object-fit:contain;vertical-align:-.25em}
+    .apple-emoji--small{width:1.15em;height:1.15em}
+    .apple-emoji--large{width:3em;height:3em}
+    .feat-title{font-size:1rem;font-weight:700;margin-bottom:8px}
+    .feat-desc{font-size:.865rem;color:var(--t2);line-height:1.65}
+    .feat-wide{grid-column:span 2}
+    .feat-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .ftag{padding:5px 12px;border-radius:8px;font-size:.75rem;font-weight:700;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.2);color:var(--pl)}
+    .ftag-p{background:rgba(236,72,153,.1);border-color:rgba(236,72,153,.2);color:var(--pk)}
+
+    /* NEWS */
+    .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+    .nc{background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);overflow:hidden;display:flex;flex-direction:column;transition:var(--ease)}
+    .nc:hover{border-color:var(--bdrh);transform:translateY(-4px);box-shadow:var(--glow),var(--shadow)}
+    .nc-body{padding:26px;flex:1}
+    .nc-date{font-size:.76rem;color:var(--t3)}
+    .nc-title{font-size:1.05rem;font-weight:700;margin-bottom:9px;line-height:1.4}
+    .nc-excerpt{font-size:.84rem;color:var(--t2);line-height:1.65}
+
+    /* DOWNLOAD */
+    .dl-wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+    .dl-hero{background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(236,72,153,.07));border:1px solid rgba(168,85,247,.28);border-radius:var(--rxl);padding:44px 40px;text-align:center;position:relative;overflow:hidden}
+    .dl-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad)}
+    .dl-os-icon{margin-bottom:16px;display:flex;align-items:center;justify-content:center}
+    .os-img{display:block;object-fit:contain;opacity:.92}
+    .dl-ver-lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);margin-bottom:6px}
+    .dl-ver{font-size:1.55rem;font-weight:900;margin-bottom:8px}
+    .dl-pub{font-size:.875rem;color:var(--t2);margin-bottom:30px}
+    .dl-meta{margin-top:12px;font-size:.78rem;color:var(--t3)}
+    .dl-platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+    .dl-plat{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:16px 18px;transition:var(--ease);text-decoration:none;color:inherit}
+    .dl-plat:hover{border-color:var(--bdrh);background:var(--cardh);transform:translateY(-2px)}
+    .dl-plat.cur{border-color:rgba(168,85,247,.4);background:rgba(168,85,247,.06)}
+    .dp-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:26px;height:26px;font-size:1.4rem}
+    .dp-info{min-width:0}
+    .dp-name{font-size:.875rem;font-weight:700}
+    .dp-file{font-size:.72rem;color:var(--t3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .dp-badge{margin-left:auto;flex-shrink:0;font-size:.62rem;padding:2px 8px;background:rgba(168,85,247,.14);border:1px solid rgba(168,85,247,.28);border-radius:100px;color:var(--pl);font-weight:700;text-transform:uppercase}
+    .no-rel{background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:64px 32px;text-align:center}
+    .no-rel-icon{font-size:3rem;margin-bottom:16px;display:block}
+    .no-rel h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+    .no-rel p{font-size:.9rem;color:var(--t2)}
+
+    /* STATS */
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .stat-card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:32px 24px;text-align:center;transition:var(--ease);position:relative;overflow:hidden}
+    .stat-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:var(--ease)}
+    .stat-card:hover{border-color:var(--bdrh);transform:translateY(-4px)}
+    .stat-card:hover::after{transform:scaleX(1)}
+    .stat-icon{font-size:1.9rem;margin-bottom:12px}
+    .stat-num{font-size:2.1rem;font-weight:900;display:block;margin-bottom:6px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .stat-lbl{font-size:.82rem;color:var(--t2);font-weight:500}
+    .stats-note{margin:24px auto 0;max-width:760px;text-align:center;color:var(--t3);font-size:.72rem;line-height:1.6}
+    .stats-note a{color:var(--t2);text-decoration:underline;text-underline-offset:2px}
+
+    /* FOOTER */
+    footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:56px 0 28px}
+    .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:44px}
+    .foot-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .foot-logo img{width:34px;height:34px;border-radius:9px}
+    .foot-logo-name{font-size:1.05rem;font-weight:800}
+    .foot-tagline{font-size:.84rem;color:var(--t3);line-height:1.65;margin-bottom:20px}
+    .foot-socials{display:flex;gap:10px}
+    .foot-social{width:38px;height:38px;border-radius:var(--rs);background:var(--card);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;color:var(--t2);transition:var(--ease)}
+    .foot-social:hover{border-color:var(--bdrh);color:var(--t);background:rgba(168,85,247,.1)}
+    .foot-social svg{width:17px;height:17px}
+    .foot-col h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);margin-bottom:14px;font-weight:700}
+    .foot-col ul{list-style:none}
+    .foot-col li{margin-bottom:8px}
+    .foot-col a{font-size:.84rem;color:var(--t2);transition:var(--ease)}
+    .foot-col a:hover{color:var(--pl)}
+    .foot-bottom{border-top:1px solid var(--bdr);padding-top:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .foot-copy{font-size:.78rem;color:var(--t3)}
+    .foot-copy a{color:var(--pl)}
+    .foot-lic{display:flex;align-items:center;gap:7px;font-size:.72rem;color:var(--t3)}
+    .lic-badge{padding:2px 8px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.2);border-radius:5px;font-weight:700;color:var(--pl)}
+
+    /* SKELETON */
+    .sk{background:linear-gradient(90deg,rgba(255,255,255,.04) 25%,rgba(255,255,255,.08) 50%,rgba(255,255,255,.04) 75%);background-size:200% 100%;animation:aShimmer 1.6s infinite;border-radius:var(--rs)}
+    .sk-card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:28px}
+    .sk-line{height:13px;margin-bottom:11px}
+
+    /* SCROLL REVEAL */
+    .sr{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+    .sr.in{opacity:1;transform:none}
+
+    /* KEYFRAMES */
+    @keyframes aFadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+    @keyframes aFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+    @keyframes aPulse{0%,100%{opacity:1}50%{opacity:.3}}
+    @keyframes aBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+    @keyframes aScrollDot{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(14px)}}
+    @keyframes aShimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){.feat-grid{grid-template-columns:repeat(2,1fr)}.feat-wide{grid-column:span 2}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:768px){.nav-links,.nav-gh,.nav-dl-btn{display:none}.hamburger{display:flex}.section{padding:70px 0}.feat-grid{grid-template-columns:1fr}.feat-wide{grid-column:span 1}.foot-grid{grid-template-columns:1fr;gap:32px}.dl-hero{padding:30px 24px}}
+    @media(max-width:480px){.wrap{padding:0 16px}.hero-acts{flex-direction:column;width:100%}.hero-acts .btn{width:100%;justify-content:center}.stats-grid{grid-template-columns:repeat(2,1fr)}.dl-platforms{grid-template-columns:1fr}}
+    @media(max-width:360px){.stats-grid{grid-template-columns:1fr}.nav-logo span{display:none}}
+
+    /* FAQ */
+    .faq-item{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;transition:var(--ease)}
+    .faq-item[open]{border-color:var(--bdrh)}
+    .faq-q{list-style:none;padding:20px 24px;font-size:.95rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:var(--ease)}
+    .faq-q::-webkit-details-marker{display:none}
+    .faq-q::after{content:'＋';font-size:1.1rem;color:var(--p);flex-shrink:0;transition:var(--ease);font-weight:400}
+    .faq-item[open] .faq-q::after{content:'－'}
+    .faq-q:hover{color:var(--pl)}
+    .faq-a{padding:0 24px 20px;font-size:.88rem;color:var(--t2);line-height:1.75}
+    .faq-a p{margin:0}
+    .faq-a strong{color:var(--t)}
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">
+        <img src="https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp" alt="HalkyLauncher" width="30" height="30" loading="eager">
+        <span>HalkyLauncher</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features" data-i18n="nav_features"></a></li>
+        <li><a href="#news"     data-i18n="nav_news"></a></li>
+        <li><a href="#download" data-i18n="nav_download"></a></li>
+        <li><a href="#stats"    data-i18n="nav_stats"></a></li>
+        <li><a href="#faq"      data-i18n="nav_faq">FAQ</a></li>
+      </ul>
+      <div class="nav-end">
+        <a class="nav-gh" href="https://github.com/oleksandr1811/HalkyLauncher" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <div class="lang-sw">
+          <button class="lang-btn" data-lang="uk">UK</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+        <a href="#download" class="btn btn-fill nav-dl-btn" style="padding:9px 20px;font-size:.85rem;" data-i18n="nav_download"></a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="mmenu" role="dialog" aria-modal="true">
+  <button class="mm-close" id="mm-close">✕</button>
+  <a href="#features"  class="mm-link" data-i18n="nav_features"></a>
+  <a href="#news"      class="mm-link" data-i18n="nav_news"></a>
+  <a href="#download"  class="mm-link" data-i18n="nav_download"></a>
+  <a href="#stats"     class="mm-link" data-i18n="nav_stats"></a>
+  <a href="#faq"       class="mm-link">FAQ</a>
+  <a href="https://github.com/oleksandr1811/HalkyLauncher" target="_blank" rel="noopener" class="mm-link">GitHub</a>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-radial"></div>
+      <div class="hero-grid"></div>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    </div>
+    <div class="wrap">
+      <div class="hero-body">
+        <img src="https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp" alt="HalkyLauncher — Free Minecraft Launcher" class="hero-logo" width="96" height="96" loading="eager">
+        <h1 class="hero-title">HalkyLauncher</h1>
+        <p class="hero-sub" data-i18n-html="hero_sub">A modern <strong>free Minecraft launcher</strong> — fork of <strong>Freesm (Prism) Launcher</strong> with <strong>true offline mode</strong>, Ely.by support, custom auth servers and unlimited gaming freedom. No Microsoft account required.</p>
+        <div class="hero-acts">
+          <a href="#download" class="btn btn-fill btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span data-i18n="hero_btn_dl"></span>
+          </a>
+          <a href="https://github.com/oleksandr1811/HalkyLauncher" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span data-i18n="hero_btn_gh"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><div class="scroll-pill"></div></div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section-alt" id="features">
+    <div class="wrap">
+      <header class="s-head sr">
+        <span class="s-pill" data-i18n="s_feat_pill"></span>
+        <h2 class="s-title" data-i18n-html="s_feat_title"></h2>
+        <p class="s-desc" data-i18n="s_feat_desc"></p>
+      </header>
+      <div class="feat-grid">
+        <article class="feat-card sr"><div class="feat-inner"><div class="feat-icon"><img class="apple-emoji" src="https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/1f513.png" alt=""></div><h3 class="feat-title" data-i18n="feat_offline_t"></h3><p class="feat-desc" data-i18n="feat_offline_d"></p></div></article>
+        <article class="feat-card sr"><div class="feat-inner"><div class="feat-icon"><img class="apple-emoji" src="https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/1f3a8.png" alt=""></div><h3 class="feat-title" data-i18n="feat_elyby_t"></h3><p class="feat-desc" data-i18n="feat_elyby_d"></p></div></article>
+        <article class="feat-card sr"><div class="feat-inner"><div class="feat-icon"><img class="apple-emoji" src="https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/1f510.png" alt=""></div><h3 class="feat-title" data-i18n="feat_auth_t"></h3><p class="feat-desc" data-i18n="feat_auth_d"></p></div></article>
+        <article class="feat-card sr"><div class="feat-inner"><div class="feat-icon"><img class="apple-emoji" src="https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/1f4e6.png" alt=""></div><h3 class="feat-title" data-i18n="feat_multi_t"></h3><p class="feat-desc" data-i18n="feat_multi_d"></p></div></article>
+        <article class="feat-card feat-wide sr">
+          <div class="feat-inner">
+            <div class="feat-icon"><img class="apple-emoji" src="https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/1f6cd-fe0f.png" alt=""></div>
+            <h3 class="feat-title" data-i18n="feat_content_t"></h3>
+            <p class="feat-desc" data-i18n-html="feat_content_d"></p>
+            <div class="feat-tags">
+              <span class="ftag" data-i18n="tag_mods"></span>
+              <span class="ftag" data-i18n="tag_modpacks"></span>
+              <span class="ftag" data-i18n="tag_shaders"></span>
+              <span class="ftag" data-i18n="tag_respacks"></span>
+              <span class="ftag ftag-p">Modrinth</span>
+              <span class="ftag ftag-p">CurseForge</span>
+            </div>
+          </div>
+        </article>
+        <article class="feat-card sr"><div class="feat-inner"><div class="feat-icon"><img class="apple-emoji" src="https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/1f4f8.png" alt=""></div><h3 class="feat-title" data-i18n="feat_screens_t"></h3><p class="feat-desc" data-i18n="feat_screens_d"></p></div></article>
+        <article class="feat-card sr"><div class="feat-inner"><div class="feat-icon"><img class="apple-emoji" src="https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/26a1.png" alt=""></div><h3 class="feat-title" data-i18n="feat_aio_t"></h3><p class="feat-desc" data-i18n="feat_aio_d"></p></div></article>
+        <article class="feat-card sr"><div class="feat-inner"><div class="feat-icon"><img class="apple-emoji" src="https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/1f193.png" alt=""></div><h3 class="feat-title" data-i18n="feat_floss_t"></h3><p class="feat-desc" data-i18n="feat_floss_d"></p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="section" id="news">
+    <div class="wrap">
+      <header class="s-head sr">
+        <span class="s-pill" data-i18n="s_news_pill"></span>
+        <h2 class="s-title" data-i18n-html="s_news_title"></h2>
+        <p class="s-desc" data-i18n="s_news_desc"></p>
+      </header>
+      <div class="news-grid" id="news-grid">
+        <div class="sk-card"><div class="sk sk-line" style="width:30%;margin-bottom:14px"></div><div class="sk sk-line" style="width:70%;height:20px;margin-bottom:10px"></div><div class="sk sk-line" style="width:100%"></div><div class="sk sk-line" style="width:50%;margin-top:8px"></div></div>
+        <div class="sk-card" style="opacity:.6"><div class="sk sk-line" style="width:30%;margin-bottom:14px"></div><div class="sk sk-line" style="width:70%;height:20px;margin-bottom:10px"></div><div class="sk sk-line" style="width:100%"></div><div class="sk sk-line" style="width:50%;margin-top:8px"></div></div>
+        <div class="sk-card" style="opacity:.3"><div class="sk sk-line" style="width:30%;margin-bottom:14px"></div><div class="sk sk-line" style="width:70%;height:20px;margin-bottom:10px"></div><div class="sk sk-line" style="width:100%"></div><div class="sk sk-line" style="width:50%;margin-top:8px"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="section section-alt" id="download">
+    <div class="wrap">
+      <header class="s-head sr">
+        <span class="s-pill" data-i18n="s_dl_pill"></span>
+        <h2 class="s-title" data-i18n-html="s_dl_title"></h2>
+        <p class="s-desc" data-i18n="s_dl_desc"></p>
+      </header>
+      <div id="dl-content">
+        <div class="dl-wrap"><div class="sk-card" style="padding:44px;text-align:center"><div class="sk" style="width:80px;height:80px;border-radius:18px;margin:0 auto 14px"></div><div class="sk sk-line" style="width:50%;height:22px;margin:0 auto 10px"></div><div class="sk sk-line" style="width:70%;margin:0 auto 24px"></div><div class="sk" style="width:220px;height:56px;border-radius:12px;margin:0 auto"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section" id="stats">
+    <div class="wrap">
+      <header class="s-head sr">
+        <span class="s-pill" data-i18n="s_stats_pill"></span>
+        <h2 class="s-title" data-i18n-html="s_stats_title"></h2>
+        <p class="s-desc" data-i18n="s_stats_desc"></p>
+      </header>
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card"><div class="sk" style="width:36px;height:36px;border-radius:50%;margin:0 auto 10px"></div><div class="sk sk-line" style="width:50px;height:30px;margin:0 auto 7px"></div><div class="sk sk-line" style="width:70%;margin:0 auto"></div></div>
+        <div class="stat-card" style="opacity:.7"><div class="sk" style="width:36px;height:36px;border-radius:50%;margin:0 auto 10px"></div><div class="sk sk-line" style="width:50px;height:30px;margin:0 auto 7px"></div><div class="sk sk-line" style="width:70%;margin:0 auto"></div></div>
+        <div class="stat-card" style="opacity:.5"><div class="sk" style="width:36px;height:36px;border-radius:50%;margin:0 auto 10px"></div><div class="sk sk-line" style="width:50px;height:30px;margin:0 auto 7px"></div><div class="sk sk-line" style="width:70%;margin:0 auto"></div></div>
+        <div class="stat-card" style="opacity:.3"><div class="sk" style="width:36px;height:36px;border-radius:50%;margin:0 auto 10px"></div><div class="sk sk-line" style="width:50px;height:30px;margin:0 auto 7px"></div><div class="sk sk-line" style="width:70%;margin:0 auto"></div></div>
+      </div>
+      <p class="stats-note" data-i18n-html="stats_note"></p>
+    </div>
+  </section>
+</main>
+
+<!-- SEO CONTENT — FAQ section visible to search engines and users -->
+<section class="section section-alt" id="faq" style="padding:80px 0">
+  <div class="wrap">
+    <header class="s-head sr">
+      <span class="s-pill">FAQ</span>
+      <h2 class="s-title">Frequently Asked <span class="gt">Questions</span></h2>
+      <p class="s-desc">Everything you need to know about HalkyLauncher — the free Minecraft launcher.</p>
+    </header>
+    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+
+      <details class="faq-item sr" open>
+        <summary class="faq-q">Is HalkyLauncher free?</summary>
+        <div class="faq-a">
+          <p>Yes. HalkyLauncher is 100% free and open-source under the <strong>GPL-3.0 license</strong>. No subscriptions, no hidden fees, no paywalls — ever. You can download it, use it, and even modify the source code.</p>
+        </div>
+      </details>
+
+      <details class="faq-item sr">
+        <summary class="faq-q">Do I need a Microsoft account to use HalkyLauncher?</summary>
+        <div class="faq-a">
+          <p>No. HalkyLauncher features a <strong>true offline mode</strong> — you can launch and play Minecraft without any Microsoft account, Xbox account, or mandatory internet login. It works completely offline.</p>
+        </div>
+      </details>
+
+      <details class="faq-item sr">
+        <summary class="faq-q">What is HalkyLauncher? What is it based on?</summary>
+        <div class="faq-a">
+          <p>HalkyLauncher is a modern Minecraft launcher — a fork of <strong>Freesm Launcher</strong> (which is itself based on <strong>Prism Launcher</strong> and <strong>MultiMC</strong>). It inherits all the power of Prism and MultiMC while adding unique features: improved UI, Ely.by skin integration, custom auth servers, and much more.</p>
+        </div>
+      </details>
+
+      <details class="faq-item sr">
+        <summary class="faq-q">What operating systems are supported?</summary>
+        <div class="faq-a">
+          <p>HalkyLauncher works on <strong>Windows</strong> (x64 &amp; ARM64), <strong>Linux</strong> (x64 &amp; ARM64), and <strong>macOS</strong> (Intel &amp; Apple Silicon). All major platforms, all for free.</p>
+        </div>
+      </details>
+
+      <details class="faq-item sr">
+        <summary class="faq-q">Does HalkyLauncher support Ely.by?</summary>
+        <div class="faq-a">
+          <p>Yes. HalkyLauncher has <strong>native Ely.by support</strong> built right in — no extra mods or plugins needed. Your custom skins, capes and profile data from Ely.by will show up everywhere in-game automatically.</p>
+        </div>
+      </details>
+
+      <details class="faq-item sr">
+        <summary class="faq-q">Can I install mods, modpacks and shaders?</summary>
+        <div class="faq-a">
+          <p>Yes. HalkyLauncher includes a built-in browser for <strong>Modrinth</strong> and <strong>CurseForge</strong> — the two largest Minecraft content platforms. Install mods, modpacks, shader packs, and resource packs with one click, directly inside the launcher.</p>
+        </div>
+      </details>
+
+      <details class="faq-item sr">
+        <summary class="faq-q">Is this the same as Freesm Launcher or Prism Launcher?</summary>
+        <div class="faq-a">
+          <p>HalkyLauncher is a <strong>fork of Freesm Launcher</strong>, which is itself a fork of Prism Launcher. Think of it as Prism Launcher → Freesm Launcher → HalkyLauncher. Each step adds improvements. HalkyLauncher focuses on UI polish, offline-first gameplay, Ely.by integration and ease of use.</p>
+        </div>
+      </details>
+
+      <details class="faq-item sr">
+        <summary class="faq-q">What makes HalkyLauncher different from other Minecraft launchers?</summary>
+        <div class="faq-a">
+          <p>HalkyLauncher stands out with: <strong>true offline mode</strong> (no Microsoft login), <strong>native Ely.by skin support</strong>, <strong>custom authentication servers</strong> with authlib-injector, integrated mod/modpack browser (Modrinth + CurseForge), smart screenshot clipboard copy, and beautiful modern UI — all completely free and open-source.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEO keyword text block (accessible, relevant, not hidden) -->
+<section class="section" style="padding:56px 0 40px">
+  <div class="wrap" style="max-width:760px;margin:0 auto">
+    <h2 class="s-title" style="font-size:1.3rem;margin-bottom:12px">About HalkyLauncher — Free Minecraft Launcher</h2>
+    <p style="font-size:.9rem;color:var(--t2);line-height:1.8;margin-bottom:12px">
+      <strong>HalkyLauncher</strong> is a free, open-source Minecraft launcher built for players who want freedom. Whether you call it <em>Halky Launcher</em>, <em>halkylancher</em>, or simply the best <em>free Minecraft launcher</em> — it's the same great tool. Based on the popular <strong>Freesm Launcher</strong> and <strong>Prism Launcher</strong> codebase, HalkyLauncher brings a polished experience with no strings attached.
+    </p>
+    <p style="font-size:.9rem;color:var(--t2);line-height:1.8;margin-bottom:12px">
+      Looking for a <strong>Minecraft launcher without Microsoft account</strong>? HalkyLauncher's offline mode lets you play instantly. Need <strong>Ely.by support</strong>? It's built in. Want to manage multiple game versions, install modpacks from <strong>Modrinth</strong> or <strong>CurseForge</strong>, and use custom auth servers? All included, zero cost.
+    </p>
+    <p style="font-size:.9rem;color:var(--t2);line-height:1.8">
+      Download HalkyLauncher for <strong>Windows</strong>, <strong>Linux</strong>, or <strong>macOS</strong> — it's the best free alternative to the official Minecraft launcher, Prism Launcher, and ATLauncher. Join thousands of players who chose freedom with HalkyLauncher.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <img src="https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp" alt="HalkyLauncher" width="34" height="34" loading="lazy">
+          <span class="foot-logo-name gt">HalkyLauncher</span>
+        </div>
+        <p class="foot-tagline" data-i18n="foot_tagline"></p>
+        <div class="foot-socials">
+          <a class="foot-social" href="https://github.com/oleksandr1811/HalkyLauncher" target="_blank" rel="noopener" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+          <a class="foot-social" href="https://discord.gg/Ntx74Zy3Wy" target="_blank" rel="noopener" title="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.446.864-.608 1.249a18.27 18.27 0 0 0-5.443 0 12.614 12.614 0 0 0-.617-1.249.077.077 0 0 0-.079-.037 19.736 19.736 0 0 0-4.885 1.515.07.07 0 0 0-.032.027C1.679 9.045.738 13.58 1.195 18.057a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 6.032 3.03.078.078 0 0 0 .084-.028c.465-.63.883-1.296 1.247-1.994a.076.076 0 0 0-.041-.106 13.067 13.067 0 0 1-1.897-.9.077.077 0 0 1-.008-.128c.127-.095.254-.194.375-.292a.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.121.098.248.197.375.292a.077.077 0 0 1-.006.128 12.96 12.96 0 0 1-1.898.9.076.076 0 0 0-.04.107c.37.698.788 1.364 1.247 1.994a.077.077 0 0 0 .084.028 19.839 19.839 0 0 0 6.033-3.03.077.077 0 0 0 .031-.056c.54-5.234-.9-9.726-3.807-13.661a.061.061 0 0 0-.031-.03ZM8.02 15.331c-1.182 0-2.157-1.085-2.157-2.419 0-1.334.955-2.42 2.157-2.42 1.21 0 2.176 1.096 2.157 2.42 0 1.334-.955 2.419-2.157 2.419Zm7.98 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.334.955-2.42 2.157-2.42 1.21 0 2.176 1.096 2.157 2.42 0 1.334-.947 2.419-2.157 2.419Z"/></svg></a>
+          <a class="foot-social" href="https://t.me/halky_launcher" target="_blank" rel="noopener" title="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+          <a class="foot-social" href="https://halkylauncher.alex1811.ovh/feed.xml" target="_blank" rel="noopener" title="RSS"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_project"></h4>
+        <ul>
+          <li><a href="https://github.com/oleksandr1811/HalkyLauncher" target="_blank" rel="noopener" data-i18n="foot_repo"></a></li>
+          <li><a href="https://github.com/oleksandr1811/HalkyLauncher/releases" target="_blank" rel="noopener" data-i18n="foot_releases"></a></li>
+          <li><a href="https://github.com/oleksandr1811/HalkyLauncher/issues" target="_blank" rel="noopener" data-i18n="foot_bugs"></a></li>
+          <li><a href="https://github.com/oleksandr1811/HalkyLauncher/actions" target="_blank" rel="noopener" data-i18n="foot_devbuilds"></a></li>
+          <li><a href="/sitemap.xml" rel="nofollow">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_community"></h4>
+        <ul>
+          <li><a href="https://discord.gg/Ntx74Zy3Wy" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://t.me/halky_launcher" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://halkylauncher.alex1811.ovh/feed.xml" target="_blank" rel="noopener">RSS Feed</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-copy" data-i18n-html="foot_copy"></p>
+      <div class="foot-lic"><span data-i18n="foot_lic"></span> <span class="lic-badge">GPL-3.0</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+'use strict';
+
+// ── CONFIG ────────────────────────────────────────────────────────
+const CFG = {
+  RELEASES_REPO: 'oleksandr1811/HalkyLauncher',
+  STATS_REPO:    'oleksandr1811/HalkyLauncher',
+  NEWS_FEED:     'https://halkylauncher.alex1811.ovh/feed.xml',
+};
+
+// ── TRANSLATIONS ──────────────────────────────────────────────────
+const I18N = {
+  uk: {
+    nav_features:'Можливості', nav_news:'Новини', nav_download:'Завантажити', nav_stats:'Статистика', nav_faq:'FAQ',
+    hero_badge:'Форк Freesm (Prism) Launcher',
+    hero_sub:'Сучасний Minecraft лаунчер з <strong>чудовим UI</strong> та <strong>широкими можливостями кастомізації</strong>. Справжній офлайн-режим, підтримка Ely.by, кастомних серверів і безмежної свободи гри.',
+    hero_btn_dl:'Завантажити безкоштовно', hero_btn_gh:'Переглянути на GitHub',
+    hero_os_note:'Визначено: {icon} {name}',
+    s_feat_pill:'Можливості', s_feat_title:'Все для вашого <span class="gt">Minecraft</span>',
+    s_feat_desc:'Повнофункціональний лаунчер на базі Prism Launcher і MultiMC з унікальними покращеннями.',
+    feat_offline_t:'Справжній офлайн-режим', feat_offline_d:'Грайте без примусового входу через Microsoft-акаунт. Повна свобода гри без обов\'язкової авторизації.',
+    feat_elyby_t:'Інтеграція з Ely.by', feat_elyby_d:'Нативна підтримка Ely.by з коробки. Бачте кастомні скіни скрізь без сторонніх модів чи плагінів.',
+    feat_auth_t:'Кастомна автентифікація', feat_auth_d:'Повна підтримка власних серверів автентифікації та authlib-injector. Підключайтесь до будь-яких auth-серверів.',
+    feat_multi_t:'Підтримка багатьох інстансів', feat_multi_d:'Керуйте необмеженою кількістю ігрових інстансів: різні версії, модпаки і конфігурації — все в одному місці.',
+    feat_content_t:'Легке встановлення контенту',
+    feat_content_d:'Безперешкодно завантажуйте моди, шейдери, модпаки та ресурс-паки прямо в лаунчері через <strong style="color:var(--pl)">Modrinth</strong> і <strong style="color:var(--pk)">CurseForge</strong> — найбільші бібліотеки контенту для Minecraft.',
+    tag_mods:'Моди', tag_modpacks:'Модпаки', tag_shaders:'Шейдери', tag_respacks:'Ресурс-паки',
+    feat_screens_t:'Розумні скріншоти', feat_screens_d:'Внутрішньоігрові скріншоти автоматично копіюються до буфера обміну. Миттєво діліться моментами.',
+    feat_winter_t:'Зимова магія', feat_winter_d:'Анімований сніг для тих, хто любить зимову атмосферу. Автоматично вмикається в зимовий сезон.',
+    feat_aio_t:'Все в одному', feat_aio_d:'Включає всі стандартні функції Prism Launcher і MultiMC. Найкраще від обох лаунчерів в одному продукті.',
+    feat_floss_t:'Вільне ПЗ (FLOSS)', feat_floss_d:'Вільне, відкрите й безкоштовне. Без телеметрії, без збору даних. Ліцензія GPL-3.0.',
+    s_news_pill:'📰 Новини', s_news_title:'Останні <span class="gt">оновлення</span>',
+    s_news_desc:'Слідкуйте за розробкою та важливими новинами проєкту.',
+    news_empty:'Новин поки немає. Слідкуйте за оновленнями!',
+    news_error:'Не вдалося завантажити новини. Перевірте підключення.', news_rss:'Відкрити RSS Feed →',
+    s_dl_pill:'Завантаження', s_dl_title:'Завантажити <span class="gt">HalkyLauncher</span>',
+    s_dl_desc:'Доступний для Windows, Linux та macOS. Безкоштовно.',
+    dl_latest:'Остання версія', dl_published:'Опубліковано {date}', dl_prerelease:'Попередній реліз',
+    dl_btn:'Завантажити для {os}', dl_no_file:'Файл для вашої ОС не знайдено. Оберіть нижче.',
+    dl_your_os:'Ваша ОС', dl_no_rel_title:'Релізів ще не було',
+    dl_no_rel_desc:'Слідкуйте за розробкою проєкту.', dl_dev_builds:'Дивитися dev builds →',
+    dl_err_title:'Не вдалося завантажити релізи', dl_err_desc:'Перевірте мережу або спробуйте пізніше.',
+    dl_err_btn:'Відкрити GitHub Releases',
+    s_stats_pill:'Статистика', s_stats_title:'Проєкт у <span class="gt">цифрах</span>',
+    s_stats_desc:'Актуальні дані про проєкт.',
+    stats_note:'Встановлення та запуски враховуються лише для гравців, які увімкнули телеметрію. Повністю переглянути телеметрію можна у <a href="telemetry-view.php">telemetry-view.php</a>.',
+    stat_stars:'GitHub зірок', stat_installs:'Встановлень', stat_commits:'Комітів', stat_runs:'Запусків',
+    foot_tagline:'Сучасний форк Freesm (Prism) Launcher з покращеним UI і широкими можливостями кастомізації. Вільне ПЗ за ліцензією GPL-3.0.',
+    foot_project:'Проєкт', foot_repo:'Репозиторій', foot_releases:'Релізи',
+    foot_bugs:'Звіти про баги', foot_devbuilds:'Dev builds', foot_community:'Спільнота',
+    foot_copy:'HalkyLauncher — форк <a href="https://github.com/FreesmTeam/FreesmLauncher" target="_blank" rel="noopener">Freesm Launcher</a>.',
+    foot_lic:'Ліцензія',
+    os_windows:'Windows', os_windows_arm64:'Windows ARM64', os_linux_x64:'Linux x64',
+    os_linux_arm64:'Linux ARM64', os_macos_intel:'macOS Intel', os_macos_arm:'macOS Apple Silicon',
+    os_ios:'iOS', os_android:'Android', os_unknown:'Невідома ОС',
+  },
+  en: {
+    nav_features:'Features', nav_news:'News', nav_download:'Download', nav_stats:'Stats', nav_faq:'FAQ',
+    hero_badge:'Fork of Freesm (Prism) Launcher',
+    hero_sub:'A modern Minecraft launcher with <strong>excellent UI</strong> and <strong>rich customizations</strong>. True offline mode, Ely.by support, custom auth servers and unlimited gaming freedom.',
+    hero_btn_dl:'Download for free', hero_btn_gh:'View on GitHub',
+    hero_os_note:'Detected: {icon} {name}',
+    s_feat_pill:'Features', s_feat_title:'Everything for your <span class="gt">Minecraft</span>',
+    s_feat_desc:'A full-featured launcher based on Prism Launcher and MultiMC with unique improvements.',
+    feat_offline_t:'True Offline Mode', feat_offline_d:'Play without being forced to sign in with a Microsoft account. Full gaming freedom without mandatory login.',
+    feat_elyby_t:'Ely.by Integration', feat_elyby_d:'Native Ely.by support out of the box. See your custom skins everywhere without third-party mods or plugins.',
+    feat_auth_t:'Custom Authentication', feat_auth_d:'Full support for custom auth servers and authlib-injector. Connect to any authentication server you need.',
+    feat_multi_t:'Multiple Instances', feat_multi_d:'Manage unlimited game instances: different versions, modpacks and configurations — all in one place.',
+    feat_content_t:'Easy Content Installation',
+    feat_content_d:'Seamlessly download mods, shaders, modpacks and resource packs inside the launcher via <strong style="color:var(--pl)">Modrinth</strong> and <strong style="color:var(--pk)">CurseForge</strong> — the largest Minecraft content libraries.',
+    tag_mods:'Mods', tag_modpacks:'Modpacks', tag_shaders:'Shaders', tag_respacks:'Resource packs',
+    feat_screens_t:'Smart Screenshots', feat_screens_d:'In-game screenshots are automatically copied to your clipboard. Share moments instantly.',
+    feat_winter_t:'Winter Magic', feat_winter_d:'Animated snow for those who love winter vibes. Activates automatically during the winter season.',
+    feat_aio_t:'All-in-One', feat_aio_d:'Includes all standard features from Prism Launcher and MultiMC. The best of both launchers in one product.',
+    feat_floss_t:'Free Software (FLOSS)', feat_floss_d:'Free, open and completely free of charge. No telemetry, no data collection. GPL-3.0 license.',
+    s_news_pill:'📰 News', s_news_title:'Latest <span class="gt">Updates</span>',
+    s_news_desc:'Follow the development and important project news.',
+    news_empty:'No news yet. Stay tuned for updates!',
+    news_error:'Failed to load news. Check your connection.', news_rss:'Open RSS Feed →',
+    s_dl_pill:'Download', s_dl_title:'Download <span class="gt">HalkyLauncher</span>',
+    s_dl_desc:'Available for Windows, Linux and macOS. Free of charge.',
+    dl_latest:'Latest version', dl_published:'Published {date}', dl_prerelease:'Pre-release',
+    dl_btn:'Download for {os}', dl_no_file:'File not found for your OS. Choose below.',
+    dl_your_os:'Your OS', dl_no_rel_title:'No releases yet',
+    dl_no_rel_desc:'Follow the project development.', dl_dev_builds:'View dev builds →',
+    dl_err_title:'Failed to load releases', dl_err_desc:'Check your connection or try again later.',
+    dl_err_btn:'Open GitHub Releases',
+    s_stats_pill:'Statistics', s_stats_title:'Project in <span class="gt">Numbers</span>',
+    s_stats_desc:'Live project data.',
+    stats_note:'Installs and runs include only players who have enabled telemetry. View the complete telemetry data at <a href="telemetry-view.php">telemetry-view.php</a>.',
+    stat_stars:'GitHub Stars', stat_installs:'Installs', stat_commits:'Commits', stat_runs:'Runs',
+    foot_tagline:'A modern fork of Freesm (Prism) Launcher with improved UI and rich customization options. Free software under GPL-3.0.',
+    foot_project:'Project', foot_repo:'Repository', foot_releases:'Releases',
+    foot_bugs:'Bug Reports', foot_devbuilds:'Dev builds', foot_community:'Community',
+    foot_copy:'HalkyLauncher — fork of <a href="https://github.com/FreesmTeam/FreesmLauncher" target="_blank" rel="noopener">Freesm Launcher</a>.',
+    foot_lic:'License',
+    os_windows:'Windows', os_windows_arm64:'Windows ARM64', os_linux_x64:'Linux x64',
+    os_linux_arm64:'Linux ARM64', os_macos_intel:'macOS Intel', os_macos_arm:'macOS Apple Silicon',
+    os_ios:'iOS', os_android:'Android', os_unknown:'Unknown OS',
+  },
+  de: {
+    nav_features:'Funktionen', nav_news:'Neuigkeiten', nav_download:'Herunterladen', nav_stats:'Statistik', nav_faq:'FAQ',
+    hero_badge:'Fork von Freesm (Prism) Launcher',
+    hero_sub:'Ein moderner Minecraft-Launcher mit <strong>hervorragender Benutzeroberfläche</strong> und <strong>umfangreichen Anpassungen</strong>. Echter Offline-Modus, Ely.by-Unterstützung und eigene Authentifizierungsserver.',
+    hero_btn_dl:'Kostenlos herunterladen', hero_btn_gh:'Auf GitHub ansehen',
+    hero_os_note:'Erkannt: {icon} {name}',
+    s_feat_pill:'Funktionen', s_feat_title:'Alles für dein <span class="gt">Minecraft</span>',
+    s_feat_desc:'Ein voll ausgestatteter Launcher auf Basis von Prism Launcher und MultiMC mit einzigartigen Verbesserungen.',
+    feat_offline_t:'Echter Offline-Modus', feat_offline_d:'Spielen ohne erzwungenen Microsoft-Account-Login. Volle Spielfreiheit ohne Pflichtanmeldung.',
+    feat_elyby_t:'Ely.by-Integration', feat_elyby_d:'Native Ely.by-Unterstützung ab Werk. Eigene Skins überall sehen ohne Drittanbieter-Mods.',
+    feat_auth_t:'Eigene Authentifizierung', feat_auth_d:'Volle Unterstützung für eigene Authentifizierungsserver und authlib-injector. Verbindung zu beliebigen Auth-Servern.',
+    feat_multi_t:'Mehrere Instanzen', feat_multi_d:'Verwalte unbegrenzt viele Spielinstanzen: verschiedene Versionen, Modpacks und Konfigurationen — alles an einem Ort.',
+    feat_content_t:'Einfache Inhaltsinstallation',
+    feat_content_d:'Mods, Shader, Modpacks und Ressourcenpakete direkt im Launcher über <strong style="color:var(--pl)">Modrinth</strong> und <strong style="color:var(--pk)">CurseForge</strong> herunterladen — die größten Minecraft-Inhaltsbibliotheken.',
+    tag_mods:'Mods', tag_modpacks:'Modpacks', tag_shaders:'Shader', tag_respacks:'Ressourcenpakete',
+    feat_screens_t:'Smarte Screenshots', feat_screens_d:'Spielinterne Screenshots werden automatisch in die Zwischenablage kopiert. Momente sofort teilen.',
+    feat_winter_t:'Wintermagie', feat_winter_d:'Animierter Schnee für alle, die Winterstimmung lieben. Aktiviert sich automatisch in der Wintersaison.',
+    feat_aio_t:'Alles-in-einem', feat_aio_d:'Enthält alle Standardfunktionen von Prism Launcher und MultiMC. Das Beste beider Launcher in einem Produkt.',
+    feat_floss_t:'Freie Software (FLOSS)', feat_floss_d:'Frei, quelloffen und kostenlos. Keine Telemetrie, keine Datenerfassung. GPL-3.0-Lizenz.',
+    s_news_pill:'📰 Neuigkeiten', s_news_title:'Neueste <span class="gt">Updates</span>',
+    s_news_desc:'Verfolge die Entwicklung und wichtige Projektneuigkeiten.',
+    news_empty:'Noch keine Neuigkeiten. Bleib dran!',
+    news_error:'Neuigkeiten konnten nicht geladen werden.', news_rss:'RSS-Feed öffnen →',
+    s_dl_pill:'Herunterladen', s_dl_title:'Herunterladen: <span class="gt">HalkyLauncher</span>',
+    s_dl_desc:'Verfügbar für Windows, Linux und macOS. Kostenlos.',
+    dl_latest:'Neueste Version', dl_published:'Veröffentlicht am {date}', dl_prerelease:'Vorveröffentlichung',
+    dl_btn:'Für {os} herunterladen', dl_no_file:'Keine Datei für dein Betriebssystem. Unten auswählen.',
+    dl_your_os:'Dein OS', dl_no_rel_title:'Noch keine Releases',
+    dl_no_rel_desc:'Verfolge die Projektentwicklung.', dl_dev_builds:'Dev-Builds ansehen →',
+    dl_err_title:'Releases konnten nicht geladen werden', dl_err_desc:'Verbindung prüfen oder später erneut versuchen.',
+    dl_err_btn:'GitHub Releases öffnen',
+    s_stats_pill:'Statistik', s_stats_title:'Projekt in <span class="gt">Zahlen</span>',
+    s_stats_desc:'Aktuelle Projektdaten.',
+    stats_note:'Installationen und Starts umfassen nur Spieler, die die Telemetrie aktiviert haben. Die vollständigen Telemetriedaten finden Sie unter <a href="telemetry-view.php">telemetry-view.php</a>.',
+    stat_stars:'GitHub-Sterne', stat_installs:'Installationen', stat_commits:'Commits', stat_runs:'Starts',
+    foot_tagline:'Ein moderner Fork von Freesm (Prism) Launcher mit verbesserter Benutzeroberfläche. Freie Software unter GPL-3.0.',
+    foot_project:'Projekt', foot_repo:'Repository', foot_releases:'Releases',
+    foot_bugs:'Fehlerberichte', foot_devbuilds:'Dev-Builds', foot_community:'Community',
+    foot_copy:'HalkyLauncher — Fork von <a href="https://github.com/FreesmTeam/FreesmLauncher" target="_blank" rel="noopener">Freesm Launcher</a>.',
+    foot_lic:'Lizenz',
+    os_windows:'Windows', os_windows_arm64:'Windows ARM64', os_linux_x64:'Linux x64',
+    os_linux_arm64:'Linux ARM64', os_macos_intel:'macOS Intel', os_macos_arm:'macOS Apple Silicon',
+    os_ios:'iOS', os_android:'Android', os_unknown:'Unbekanntes OS',
+  },
+};
+
+// ── I18N ENGINE ───────────────────────────────────────────────────
+const LOCALES = { uk:'uk-UA', en:'en-US', de:'de-DE' };
+
+function detectLang() {
+  const saved = localStorage.getItem('hl-lang');
+  if (saved && I18N[saved]) return saved;
+  for (const l of (navigator.languages || [navigator.language || 'en'])) {
+    const c = l.toLowerCase().split('-')[0];
+    if (I18N[c]) return c;
+  }
+  return 'en';
+}
+
+let LANG = detectLang();
+
+function t(key, vars = {}) {
+  let s = (I18N[LANG] || I18N.en)[key] || I18N.en[key] || key;
+  for (const [k, v] of Object.entries(vars)) s = s.replace(`{${k}}`, v);
+  return s;
+}
+
+function applyLang(lang) {
+  LANG = lang;
+  localStorage.setItem('hl-lang', lang);
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+  if (_releases !== null) renderDownload(_releases);
+  if (_stats   !== null) renderStats(_stats);
+  if (_news    !== null) renderNews(_news);
+}
+
+// Lang switcher
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+
+// ── PARTICLES ─────────────────────────────────────────────────────
+(function() {
+  const cv = document.getElementById('hero-canvas'), ctx = cv.getContext('2d');
+  let W, H, pts;
+  const resize = () => { W = cv.width = innerWidth; H = cv.height = innerHeight; };
+  const mkPt = () => ({ x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.28, vy:(Math.random()-.5)*.28, r:Math.random()*1.4+.4, a:Math.random()*.45+.08, c:Math.random()>.5?'168,85,247':'236,72,153' });
+  resize(); pts = Array.from({length:75}, mkPt);
+  (function draw() {
+    ctx.clearRect(0,0,W,H);
+    for (let i=0;i<pts.length;i++) {
+      const p=pts[i]; p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle=`rgba(${p.c},${p.a})`; ctx.fill();
+      for(let j=i+1;j<pts.length;j++){const q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(168,85,247,${.055*(1-d/110)})`;ctx.lineWidth=.5;ctx.stroke();}}
+    }
+    requestAnimationFrame(draw);
+  })();
+  window.addEventListener('resize', resize, {passive:true});
+})();
+
+// ── NAV & MENU ────────────────────────────────────────────────────
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 50), {passive:true});
+const mmenu = document.getElementById('mmenu'), hbg = document.getElementById('hamburger'), mmc = document.getElementById('mm-close');
+const openM = () => { mmenu.classList.add('open'); hbg.setAttribute('aria-expanded','true'); };
+const closeM = () => { mmenu.classList.remove('open'); hbg.setAttribute('aria-expanded','false'); };
+hbg.addEventListener('click', openM); mmc.addEventListener('click', closeM);
+document.querySelectorAll('.mm-link').forEach(l => l.addEventListener('click', closeM));
+document.addEventListener('keydown', e => e.key==='Escape' && closeM());
+
+// ── SCROLL REVEAL ─────────────────────────────────────────────────
+const srObs = new IntersectionObserver(entries => {
+  entries.forEach((e,i) => { if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);srObs.unobserve(e.target);} });
+}, {threshold:.1});
+document.querySelectorAll('.sr').forEach(el => srObs.observe(el));
+
+// ── OS DETECTION ──────────────────────────────────────────────────
+function detectOS() {
+  const ua = navigator.userAgent.toLowerCase(), pl = (navigator.platform||'').toLowerCase();
+  if(/iphone|ipad|ipod/.test(ua)) return 'ios';
+  if(/android/.test(ua)) return 'android';
+  if(/mac/.test(pl)||/macintosh/.test(ua)) {
+    const gl=document.createElement('canvas').getContext('webgl');
+    const ext=gl&&gl.getExtension('WEBGL_debug_renderer_info');
+    const r=(ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):'').toLowerCase();
+    return (r.includes('apple')&&!r.includes('intel')) ? 'macos-arm' : 'macos-intel';
+  }
+  if(/win/.test(pl)||/windows/.test(ua)) {
+    return (/arm64|aarch64/.test(ua)||navigator.userAgentData?.architecture==='arm') ? 'windows-arm64' : 'windows';
+  }
+  if(/linux/.test(pl)||/linux/.test(ua)) return /aarch64|arm64/.test(ua) ? 'linux-arm64' : 'linux-x64';
+  return 'unknown';
+}
+const OS = detectOS();
+const OS_META = {
+  windows:        { emoji:'1fa9f', svg:'assets/icons/icon-windows.svg', key:'os_windows' },
+  'windows-arm64':{ emoji:'1fa9f', svg:'assets/icons/icon-windows.svg', key:'os_windows_arm64' },
+  'linux-x64':    { emoji:'1f427', svg:'assets/icons/icon-linux.svg',   key:'os_linux_x64' },
+  'linux-arm64':  { emoji:'1f427', svg:'assets/icons/icon-linux.svg',   key:'os_linux_arm64' },
+  'macos-intel':  { emoji:'1f34e', svg:'assets/icons/icon-apple.svg',   key:'os_macos_intel' },
+  'macos-arm':    { emoji:'1f34e', svg:'assets/icons/icon-apple.svg',   key:'os_macos_arm' },
+  ios:            { emoji:'1f4f1', svg:'assets/icons/icon-apple.svg',   key:'os_ios' },
+  android:        { emoji:'1f916', svg:null,                            key:'os_android' },
+  unknown:        { emoji:'1f4bb', svg:null,                            key:'os_unknown' },
+};
+const APPLE_EMOJI_CDN = 'https://cdn.jsdelivr.net/gh/RealityRipple/emoji/apple/';
+function appleEmoji(code, className='apple-emoji', alt='') {
+  return `<img class="${className}" src="${APPLE_EMOJI_CDN}${code}.png" alt="${alt}" loading="lazy">`;
+}
+function appleEmojiFor(code, className='apple-emoji') {
+  return appleEmoji(code, className);
+}
+function osIcon(m, size) {
+  return m.svg
+    ? `<img src="${m.svg}" alt="" class="os-img" style="width:${size};height:${size}" aria-hidden="true">`
+    : appleEmojiFor(m.emoji, 'apple-emoji--small');
+}
+
+// ── ASSET MATCHING ────────────────────────────────────────────────
+function matchAsset(assets, os) {
+  if(!assets?.length) return null;
+  if(os==='windows') return assets.find(a=>/windows/i.test(a.name)&&/\.exe$/i.test(a.name)&&!/arm64|aarch64/i.test(a.name)&&/msvc|x86_64|x64/i.test(a.name))||assets.find(a=>/windows/i.test(a.name)&&/\.exe$/i.test(a.name)&&!/arm64|aarch64/i.test(a.name))||assets.find(a=>/windows/i.test(a.name)&&/\.exe$/i.test(a.name))||null;
+  if(os==='windows-arm64') return assets.find(a=>/windows/i.test(a.name)&&/\.exe$/i.test(a.name)&&/arm64|aarch64/i.test(a.name))||assets.find(a=>/windows/i.test(a.name)&&/\.exe$/i.test(a.name))||null;
+  const m = {'linux-x64':n=>/linux/i.test(n)&&/x86_64|amd64/i.test(n)&&!/arm|aarch/i.test(n),'linux-arm64':n=>/linux/i.test(n)&&/aarch64|arm64/i.test(n),'macos-arm':n=>/(macos|mac|osx)/i.test(n)&&/arm64|aarch64|silicon/i.test(n),'macos-intel':n=>/(macos|mac|osx)/i.test(n)&&!/arm64|aarch64|silicon/i.test(n)};
+  let hit = m[os]?assets.find(a=>m[os](a.name)):null;
+  if(!hit&&(os==='macos-arm'||os==='macos-intel')) hit=assets.find(a=>/(macos|mac|osx)/i.test(a.name)&&/\.(zip|dmg)$/i.test(a.name));
+  if(!hit&&os==='linux-arm64') hit=assets.find(a=>/linux/i.test(a.name)&&/\.appimage$/i.test(a.name));
+  return hit||null;
+}
+
+// ── HELPERS ───────────────────────────────────────────────────────
+function fmtSize(b){if(!b)return '';if(b>=1073741824)return (b/1073741824).toFixed(1)+' GB';if(b>=1048576)return (b/1048576).toFixed(1)+' MB';if(b>=1024)return (b/1024).toFixed(0)+' KB';return b+' B';}
+function fmtDate(s,short=false){if(!s)return '';const o=short?{year:'numeric',month:'short',day:'numeric'}:{year:'numeric',month:'long',day:'numeric'};return new Date(s).toLocaleDateString(LOCALES[LANG]||'en-US',o);}
+function stripHtml(h){const d=document.createElement('div');d.innerHTML=h;return d.textContent||'';}
+function countUp(el,to,dur=1200){const s=performance.now();(function f(n){const p=Math.min((n-s)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e).toLocaleString(LOCALES[LANG]||'en-US');if(p<1)requestAnimationFrame(f);})(s);}
+
+// ── DATA CACHES ───────────────────────────────────────────────────
+let _releases = null, _stats = null, _news = null;
+
+// ── RENDER: DOWNLOAD ──────────────────────────────────────────────
+function renderDownload(releases) {
+  _releases = releases;
+  const wrap = document.getElementById('dl-content');
+  if(!releases?.length){
+    wrap.innerHTML=`<div class="dl-wrap"><div class="no-rel"><span class="no-rel-icon">${appleEmoji('1f680','apple-emoji--large')}</span><h3>${t('dl_no_rel_title')}</h3><p>${t('dl_no_rel_desc')}</p><p style="margin-top:16px"><a href="https://github.com/${CFG.RELEASES_REPO}/actions" target="_blank" rel="noopener" style="color:var(--pl);font-size:.875rem;font-weight:600">${t('dl_dev_builds')}</a></p></div></div>`;
+    return;
+  }
+  const latest=releases[0], assets=latest.assets||[];
+  const featAsset=matchAsset(assets,OS);
+  const osMeta=OS_META[OS]||OS_META.unknown;
+  const osName=t(osMeta.key);
+  const platforms=['windows','windows-arm64','linux-x64','linux-arm64','macos-intel','macos-arm'].map(o=>({os:o,asset:matchAsset(assets,o)})).filter(p=>p.asset);
+  const seen=new Set(), uniq=platforms.filter(p=>{if(seen.has(p.asset.browser_download_url))return false;seen.add(p.asset.browser_download_url);return true;});
+  const dlBtnHtml=featAsset?`<a href="${featAsset.browser_download_url}" class="btn btn-fill btn-lg">${svgDl()}<span>${t('dl_btn',{os:osName})}</span></a><p class="dl-meta">${featAsset.name}${featAsset.size?' · '+fmtSize(featAsset.size):''}${featAsset.download_count?' · '+featAsset.download_count.toLocaleString(LOCALES[LANG])+'  ↓':''}</p>`:`<p style="color:var(--t3);font-size:.9rem">${t('dl_no_file')}</p>`;
+  const platHtml=uniq.map(p=>{const m=OS_META[p.os],isCur=p.os===OS;return`<a href="${p.asset.browser_download_url}" class="dl-plat${isCur?' cur':''}" download><span class="dp-icon">${osIcon(m,'26px')}</span><div class="dp-info"><p class="dp-name">${t(m.key)}</p><p class="dp-file">${p.asset.name}</p></div>${isCur?`<span class="dp-badge">${t('dl_your_os')}</span>`:''}</a>`;}).join('');
+  wrap.innerHTML=`<div class="dl-wrap"><div class="dl-hero sr in"><span class="dl-os-icon">${osIcon(osMeta,'56px')}</span><p class="dl-ver-lbl">${t('dl_latest')}</p><p class="dl-ver gt">${latest.tag_name||latest.name||'Release'}</p><p class="dl-pub">${t('dl_published',{date:fmtDate(latest.published_at)})}${latest.prerelease?` · <span style="color:var(--pk)">${t('dl_prerelease')}</span>`:''}</p>${dlBtnHtml}</div>${uniq.length?`<div class="dl-platforms">${platHtml}</div>`:''}</div>`;
+}
+function svgDl(){return`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="width:20px;height:20px;flex-shrink:0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>`;}
+
+// ── RENDER: STATS ─────────────────────────────────────────────────
+function renderStats(data) {
+  _stats = data;
+  const grid = document.getElementById('stats-grid');
+  grid.innerHTML = data.map((s,i) => `<div class="stat-card sr" style="transition-delay:${i*70}ms"><div class="stat-icon">${s.icon}</div><span class="stat-num" data-val="${typeof s.val==='number'?s.val:''}">${typeof s.val==='number'?'0':s.val}</span><span class="stat-lbl">${t(s.lk)}</span></div>`).join('');
+  grid.querySelectorAll('.sr').forEach(el=>srObs.observe(el));
+  setTimeout(()=>{grid.querySelectorAll('.stat-num[data-val]').forEach(el=>{const v=parseInt(el.dataset.val);if(!isNaN(v))countUp(el,v);});},350);
+}
+
+// ── RENDER: NEWS ──────────────────────────────────────────────────
+function renderNews(items) {
+  _news = items;
+  const grid = document.getElementById('news-grid');
+  if(!items?.length){grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:60px 24px;color:var(--t2)"><p style="margin-bottom:14px">${appleEmoji('1f4ed','apple-emoji--large')}</p><p>${t('news_empty')}</p></div>`;return;}
+  grid.innerHTML=items.map((item,i)=>`<a href="${item.link}" class="nc sr" style="transition-delay:${i*70}ms" target="_blank" rel="noopener"><div class="nc-body">${item.updated?`<p class="nc-date" style="margin-bottom:10px">${fmtDate(item.updated,true)}</p>`:''}<h3 class="nc-title">${item.title}</h3>${item.content?`<p class="nc-excerpt">${stripHtml(item.content).substring(0,160).trim()}${stripHtml(item.content).length>160?'…':''}</p>`:''}</div></a>`).join('');
+  grid.querySelectorAll('.sr').forEach(el=>srObs.observe(el));
+}
+
+// ── FETCH HELPERS ─────────────────────────────────────────────────
+async function apiFetch(url){const r=await fetch(url,{headers:{Accept:'application/vnd.github+json'}});if(!r.ok)throw new Error(r.status);return r.json();}
+async function fetchXml(url) {
+  const enc = encodeURIComponent(url);
+  const proxies = [
+    () => fetch(url, { headers: { Accept: 'application/atom+xml,application/xml,text/xml' } }),
+    () => fetch(`https://corsproxy.io/?${enc}`),
+    () => fetch(`https://api.allorigins.win/raw?url=${enc}`),
+    () => fetch(`https://api.codetabs.com/v1/proxy?quest=${enc}`),
+  ];
+  for (const attempt of proxies) {
+    try {
+      const r = await attempt();
+      if (r.ok) return r.text();
+    } catch (_) {}
+  }
+  throw new Error('feed unavailable');
+}
+function parseAtom(xml){const doc=new DOMParser().parseFromString(xml,'application/xml');return Array.from(doc.querySelectorAll('entry')).map(e=>({title:e.querySelector('title')?.textContent?.trim()||'',link:e.querySelector('link')?.getAttribute('href')||'#',updated:e.querySelector('updated')?.textContent?.trim()||'',content:(e.querySelector('content')||e.querySelector('summary'))?.textContent?.trim()||''}));}
+
+// ── LOAD DATA ─────────────────────────────────────────────────────
+async function loadReleases(){
+  try{const d=await apiFetch(`https://api.github.com/repos/${CFG.RELEASES_REPO}/releases?per_page=5`);renderDownload(d);}
+  catch(e){console.warn('releases:',e);document.getElementById('dl-content').innerHTML=`<div class="dl-wrap"><div class="no-rel"><span class="no-rel-icon">${appleEmoji('1f50c','apple-emoji--large')}</span><h3>${t('dl_err_title')}</h3><p>${t('dl_err_desc')}</p><br><a href="https://github.com/${CFG.RELEASES_REPO}/releases" target="_blank" rel="noopener" class="btn btn-fill" style="margin-top:18px;display:inline-flex">${t('dl_err_btn')}</a></div></div>`;}
+}
+
+async function loadStats(){
+  try{
+    const [repoR,commitsR,telemetryR]=await Promise.allSettled([
+      apiFetch(`https://api.github.com/repos/${CFG.STATS_REPO}`),
+      fetch(`https://api.github.com/repos/${CFG.STATS_REPO}/commits?per_page=1`),
+      apiFetch(`https://halkylauncher.alex1811.ovh/telemetry-api.php`),
+    ]);
+    const repo=repoR.status==='fulfilled'?repoR.value:null;
+    let commits='—';
+    if(commitsR.status==='fulfilled'&&commitsR.value.ok){const lk=commitsR.value.headers.get('link')||'',m=lk.match(/page=(\d+)>; rel="last"/);if(m)commits=parseInt(m[1]);}
+    let installs='—', runs='—';
+    if(telemetryR.status==='fulfilled'){
+      const telemetry=telemetryR.value||{};
+      installs=Number.parseInt(telemetry.installs,10);
+      runs=Number.parseInt(telemetry.runs,10);
+      if(Number.isNaN(installs)) installs='—';
+      if(Number.isNaN(runs)) runs='—';
+    }
+    renderStats([
+      {icon:appleEmoji('2b50'),val:repo?.stargazers_count??'—',lk:'stat_stars'},
+      {icon:appleEmoji('2b07-fe0f'),val:installs,lk:'stat_installs'},
+      {icon:appleEmoji('1f4dd'),val:commits,lk:'stat_commits'},
+      {icon:appleEmoji('25b6-fe0f'),val:runs,lk:'stat_runs'},
+    ]);
+  }catch(e){console.warn('stats:',e);renderStats([{icon:appleEmoji('2b50'),val:'—',lk:'stat_stars'},{icon:appleEmoji('2b07-fe0f'),val:'—',lk:'stat_installs'},{icon:appleEmoji('1f4dd'),val:'—',lk:'stat_commits'},{icon:appleEmoji('25b6-fe0f'),val:'—',lk:'stat_runs'}]);}
+}
+
+async function loadNews(){
+  try{const xml=await fetchXml(CFG.NEWS_FEED);renderNews(parseAtom(xml));}
+  catch(e){console.warn('news:',e);document.getElementById('news-grid').innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:60px 24px;color:var(--t2)"><p style="margin-bottom:14px">${appleEmoji('1f50c','apple-emoji--large')}</p><p>${t('news_error')}</p><a href="${CFG.NEWS_FEED}" target="_blank" rel="noopener" style="color:var(--pl);font-size:.875rem;font-weight:600;display:inline-block;margin-top:12px">${t('news_rss')}</a></div>`;}
+}
+
+// ── INIT ──────────────────────────────────────────────────────────
+applyLang(LANG);
+loadReleases();
+loadStats();
+loadNews();
+</script>
+</body>
+</html>

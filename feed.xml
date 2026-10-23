@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HalkyLauncher</title>
+  <subtitle>Modern minecraft launcher.</subtitle>
+  <link href="https://halkylauncher.alex1811.ovh/feed" rel="self"/>
+  <link href="https://halkylauncher.alex1811.ovh/"/>
+  <updated>2026-06-13T00:00:00Z</updated>
+  <id>https://halkylauncher.alex1811.ovh</id>
+  <author>
+    <name>halkylauncher</name>
+    <email>halky@launcher.halky</email>
+  </author>
+  <entry>
+    <title>First release!</title>
+    <link href="https://github.com/oleksandr1811/halkylauncher/releases"/>
+    <updated>2026-06-13T00:00:00Z</updated>
+    <id>https://halkylauncher.alex1811.ovh/news/2</id>
+    <content type="html">
+      &lt;p&gt;The first release of HalkyLauncher is now available! Download it, give it a try, and let us know what you think — feedback and bug reports are welcome.&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>Development has begun!!</title>
+    <link href="https://github.com/oleksandr1811/halkylauncher"/>
+    <updated>2026-06-10T15:30:00Z</updated>
+    <id>https://halkylauncher.alex1811.ovh/news/1</id>
+    <content type="html">
+      &lt;p&gt;Development of the fork has begun! We want to create a launcher with an interface that even a child can understand!&lt;/p&gt;
+    </content>
+  </entry>
+</feed>

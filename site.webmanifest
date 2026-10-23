@@ -1,0 +1,20 @@
+{
+  "name": "HalkyLauncher",
+  "short_name": "HalkyLauncher",
+  "description": "Free Minecraft Launcher — fork of Prism / Freesm Launcher with offline mode, Ely.by support and custom auth. No Microsoft account required.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07070f",
+  "theme_color": "#a855f7",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>403 — HalkyLauncher</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#07070f;--bg2:#0d0d1a;--card:rgba(255,255,255,.04);
+      --bdr:rgba(255,255,255,.07);--bdrh:rgba(168,85,247,.45);
+      --p:#a855f7;--pl:#c084fc;--pk:#f5c2e7;--pb:#ec4899;
+      --t:#f1f5f9;--t2:#94a3b8;--t3:#64748b;
+      --grad:linear-gradient(135deg,#a855f7 0%,#ec4899 55%,#f5c2e7 100%);
+      --r:14px;--rs:8px;--ease:.3s cubic-bezier(.4,0,.2,1)
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--t);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}
+    ::-webkit-scrollbar-thumb{background:rgba(168,85,247,.35);border-radius:3px}
+    a{color:inherit;text-decoration:none}
+
+    /* NAV */
+    nav{position:fixed;inset:0 0 auto 0;z-index:200;padding:14px 0;background:rgba(7,7,15,.82);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--bdr)}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem}
+    .nav-logo img{width:30px;height:30px;border-radius:8px}
+    .nav-logo span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .lang-sw{display:flex;align-items:center;gap:2px;background:var(--card);border:1px solid var(--bdr);border-radius:var(--rs);padding:3px}
+    .lang-btn{padding:5px 9px;border-radius:5px;font-size:.7rem;font-weight:700;letter-spacing:.06em;color:var(--t3);background:transparent;border:none;cursor:pointer;transition:var(--ease);line-height:1;font-family:inherit}
+    .lang-btn.on{background:rgba(168,85,247,.18);color:var(--pl)}
+    .lang-btn:hover:not(.on){color:var(--t2)}
+
+    /* MAIN */
+    main{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:120px 24px 80px}
+
+    /* BG LAYERS */
+    .bg-radial{position:absolute;inset:0;pointer-events:none;background:
+      radial-gradient(ellipse 70% 55% at 50% 40%,rgba(168,85,247,.16) 0%,transparent 65%),
+      radial-gradient(ellipse 40% 35% at 80% 80%,rgba(236,72,153,.09) 0%,transparent 55%),
+      radial-gradient(ellipse 35% 30% at 15% 20%,rgba(168,85,247,.07) 0%,transparent 50%)}
+    .bg-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(168,85,247,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,.025) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,black,transparent)}
+    canvas#c{position:absolute;inset:0}
+
+    /* CONTENT */
+    .content{position:relative;z-index:1;text-align:center;max-width:600px}
+
+    /* 404 GLITCH NUMBER */
+    .num-wrap{position:relative;display:inline-block;margin-bottom:10px;user-select:none}
+
+    .num{
+      font-size:clamp(8rem,22vw,16rem);font-weight:900;line-height:1;letter-spacing:-.04em;
+      background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      position:relative;
+      animation:aShake 2.4s ease-in-out infinite, aFlicker 4s step-end infinite;
+      display:inline-block;
+      filter:drop-shadow(0 0 28px rgba(168,85,247,.45));
+    }
+
+    /* RGB split layer 1 — cyan left */
+    .num::before{
+      content:'403';
+      position:absolute;inset:0;
+      background:linear-gradient(135deg,#00f0ff 0%,#00c8ff 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      font-size:inherit;font-weight:inherit;line-height:inherit;letter-spacing:inherit;
+      animation:aRgbL 2.4s ease-in-out infinite, aSliceH 3.1s step-end infinite;
+      opacity:.75;mix-blend-mode:screen;
+      pointer-events:none;
+    }
+    /* RGB split layer 2 — red right */
+    .num::after{
+      content:'403';
+      position:absolute;inset:0;
+      background:linear-gradient(135deg,#ff003c 0%,#ff5c87 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      font-size:inherit;font-weight:inherit;line-height:inherit;letter-spacing:inherit;
+      animation:aRgbR 2.4s ease-in-out infinite, aSliceV 2.7s step-end infinite;
+      opacity:.75;mix-blend-mode:screen;
+      pointer-events:none;
+    }
+
+    /* SCANLINE overlay */
+    .num-wrap::after{
+      content:'';
+      position:absolute;inset:0;
+      background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.18) 3px,rgba(0,0,0,.18) 4px);
+      pointer-events:none;animation:aScanMove 6s linear infinite;
+    }
+
+    /* ORBIT RING */
+    .orbit{position:absolute;top:50%;left:50%;width:clamp(220px,50vw,380px);height:clamp(220px,50vw,380px);transform:translate(-50%,-50%);pointer-events:none;animation:aSpin 18s linear infinite}
+    .orbit-ring{width:100%;height:100%;border-radius:50%;border:1px dashed rgba(168,85,247,.18);position:absolute}
+    .orbit-dot{width:8px;height:8px;border-radius:50%;background:var(--grad);box-shadow:0 0 14px rgba(168,85,247,.6);position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-4px)}
+    .orbit2{animation:aSpin 28s linear infinite reverse;width:clamp(300px,65vw,500px);height:clamp(300px,65vw,500px)}
+    .orbit2 .orbit-dot{background:linear-gradient(135deg,#ec4899,#f5c2e7);box-shadow:0 0 14px rgba(236,72,153,.6);top:auto;bottom:0;transform:translateX(-50%) translateY(4px)}
+
+    /* TITLE & DESC */
+    .err-title{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;margin-bottom:12px;animation:aFadeUp .6s .1s ease both}
+    .err-desc{font-size:clamp(.9rem,2vw,1rem);color:var(--t2);line-height:1.75;margin-bottom:36px;animation:aFadeUp .6s .2s ease both}
+
+    /* BUTTONS */
+    .acts{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;animation:aFadeUp .6s .3s ease both}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--r);font-size:.9rem;font-weight:700;transition:var(--ease);border:none;white-space:nowrap;font-family:inherit;cursor:pointer}
+    .btn svg{width:17px;height:17px;flex-shrink:0}
+    .btn-fill{background:var(--grad);color:#fff;box-shadow:0 4px 24px rgba(168,85,247,.3)}
+    .btn-fill:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(168,85,247,.5);opacity:.92}
+    .btn-ghost{background:transparent;color:var(--t2);border:1px solid var(--bdr)}
+    .btn-ghost:hover{border-color:var(--bdrh);color:var(--t);background:var(--card);transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{padding:24px;text-align:center;border-top:1px solid var(--bdr);background:var(--bg2)}
+    .foot-copy{font-size:.75rem;color:var(--t3)}
+    .foot-copy a{color:var(--pl)}
+
+    /* ── KEYFRAMES ─────────────────────────────────────────────── */
+
+    /* Shake — subtle continuous tremor */
+    @keyframes aShake{
+      0%,100%{transform:translate(0,0) rotate(0deg)}
+      10%{transform:translate(-2px,1px) rotate(-.3deg)}
+      20%{transform:translate(2px,-1px) rotate(.3deg)}
+      30%{transform:translate(-1px,2px) rotate(0deg)}
+      40%{transform:translate(1px,-2px) rotate(.2deg)}
+      50%{transform:translate(-2px,0) rotate(-.2deg)}
+      60%{transform:translate(2px,1px) rotate(.1deg)}
+      70%{transform:translate(-1px,-1px) rotate(0deg)}
+      80%{transform:translate(1px,2px) rotate(-.1deg)}
+      90%{transform:translate(-2px,-1px) rotate(.3deg)}
+    }
+
+    /* Flicker — opacity glitch bursts */
+    @keyframes aFlicker{
+      0%,89%,91%,93%,100%{opacity:1}
+      90%{opacity:.2}
+      92%{opacity:.8}
+      94%{opacity:.05}
+      95%{opacity:1}
+      96%{opacity:.6}
+      97%{opacity:1}
+      98%{opacity:.3}
+      99%{opacity:1}
+    }
+
+    /* RGB channels drift */
+    @keyframes aRgbL{
+      0%,100%{transform:translate(0,0)}
+      15%{transform:translate(-5px,1px)}
+      30%{transform:translate(0,0)}
+      60%{transform:translate(-3px,-2px)}
+      75%{transform:translate(0,0)}
+      88%{transform:translate(-6px,0)}
+      90%{transform:translate(0,0)}
+    }
+    @keyframes aRgbR{
+      0%,100%{transform:translate(0,0)}
+      15%{transform:translate(5px,-1px)}
+      30%{transform:translate(0,0)}
+      60%{transform:translate(3px,2px)}
+      75%{transform:translate(0,0)}
+      88%{transform:translate(6px,0)}
+      90%{transform:translate(0,0)}
+    }
+
+    /* Horizontal slice jump */
+    @keyframes aSliceH{
+      0%,94%,100%{clip-path:none}
+      95%{clip-path:polygon(0 18%,100% 18%,100% 34%,0 34%);transform:translate(-8px,0)}
+      96%{clip-path:polygon(0 52%,100% 52%,100% 71%,0 71%);transform:translate(6px,0)}
+      97%{clip-path:none;transform:translate(0,0)}
+      98%{clip-path:polygon(0 5%,100% 5%,100% 12%,0 12%);transform:translate(-4px,0)}
+      99%{clip-path:none;transform:translate(0,0)}
+    }
+    /* Vertical slice jump */
+    @keyframes aSliceV{
+      0%,91%,100%{clip-path:none}
+      92%{clip-path:polygon(0 65%,100% 65%,100% 80%,0 80%);transform:translate(10px,0)}
+      93%{clip-path:none;transform:translate(0,0)}
+      95%{clip-path:polygon(0 30%,100% 30%,100% 44%,0 44%);transform:translate(-7px,0)}
+      96%{clip-path:none;transform:translate(0,0)}
+    }
+
+    /* Scanlines scroll */
+    @keyframes aScanMove{from{background-position:0 0}to{background-position:0 100px}}
+
+    @keyframes aSpin{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+    @keyframes aFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+    @media(max-width:480px){.wrap{padding:0 16px}.acts{flex-direction:column;width:100%}.acts .btn{width:100%;justify-content:center}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        <img src="https://raw.githubusercontent.com/oleksandr1811/HalkyLauncher/develop/docs/favicon.webp" alt="HalkyLauncher" width="30" height="30" loading="eager">
+        <span>HalkyLauncher</span>
+      </a>
+      <div class="lang-sw">
+        <button class="lang-btn" data-lang="uk">UK</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="bg-radial"></div>
+  <div class="bg-grid"></div>
+  <canvas id="c" aria-hidden="true"></canvas>
+
+  <div class="orbit orbit2"><div class="orbit-ring"></div><div class="orbit-dot"></div></div>
+  <div class="orbit"><div class="orbit-ring"></div><div class="orbit-dot"></div></div>
+
+  <div class="content">
+    <div class="num-wrap">
+      <div class="num">403</div>
+    </div>
+    <h1 class="err-title" id="err-title"></h1>
+    <p class="err-desc" id="err-desc"></p>
+    <div class="acts">
+      <a href="/" class="btn btn-fill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12L12 3l9 9M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9"/></svg>
+        <span id="btn-home"></span>
+      </a>
+      <a href="https://github.com/oleksandr1811/HalkyLauncher" target="_blank" rel="noopener" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-copy">
+    HalkyLauncher — fork of <a href="https://github.com/FreesmTeam/FreesmLauncher" target="_blank" rel="noopener">Freesm Launcher</a>.
+    <span style="margin-left:8px;padding:2px 8px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.2);border-radius:5px;font-weight:700;color:#c084fc;font-size:.7rem">GPL-3.0</span>
+  </div>
+</footer>
+
+<script>
+'use strict';
+
+const I18N = {
+  uk:{
+    title:'Доступ заборонено',
+    desc:'У вас немає дозволу переглядати цю сторінку.\nЯкщо це помилка — зверніться до підтримки.',
+    btn_home:'На головну',
+  },
+  en:{
+    title:'Access forbidden',
+    desc:'You don\'t have permission to view this page.\nIf this is a mistake, please contact support.',
+    btn_home:'Go home',
+  },
+  de:{
+    title:'Zugriff verweigert',
+    desc:'Du hast keine Berechtigung, diese Seite zu sehen.\nFalls das ein Fehler ist, wende dich an den Support.',
+    btn_home:'Zur Startseite',
+  },
+};
+
+function detectLang(){
+  const saved=localStorage.getItem('hl-lang');
+  if(saved&&I18N[saved])return saved;
+  for(const l of(navigator.languages||[navigator.language||'en'])){
+    const c=l.toLowerCase().split('-')[0];
+    if(I18N[c])return c;
+  }
+  return 'en';
+}
+
+function applyLang(lang){
+  const d=I18N[lang]||I18N.en;
+  localStorage.setItem('hl-lang',lang);
+  document.documentElement.lang=lang;
+  document.getElementById('err-title').textContent=d.title;
+  document.getElementById('err-desc').innerHTML=d.desc.replace('\n','<br>');
+  document.getElementById('btn-home').textContent=d.btn_home;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
+}
+
+document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+applyLang(detectLang());
+
+/* particles */
+(function(){
+  const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+  let W,H,pts;
+  const resize=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight;};
+  const mkPt=()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.4+.4,a:Math.random()*.45+.08,c:Math.random()>.5?'168,85,247':'236,72,153'});
+  resize();pts=Array.from({length:55},mkPt);
+  (function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(let i=0;i<pts.length;i++){
+      const p=pts[i];p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(${p.c},${p.a})`;ctx.fill();
+      for(let j=i+1;j<pts.length;j++){const q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(168,85,247,${.05*(1-d/110)})`;ctx.lineWidth=.5;ctx.stroke();}}
+    }
+    requestAnimationFrame(draw);
+  })();
+  window.addEventListener('resize',resize,{passive:true});
+})();
+</script>
+</body>
+</html>

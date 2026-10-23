@@ -1,0 +1,19 @@
+# Sensitive configuration & credentials
+config/credentials.php
+config/config.php
+*.local.php
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
